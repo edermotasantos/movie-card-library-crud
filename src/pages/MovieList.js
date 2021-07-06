@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import MovieCard from '../components/MovieCard';
 import * as movieAPI from '../services/movieAPI';
 import Loading from '../components/Loading';
@@ -25,18 +26,27 @@ class MovieList extends Component {
 
   async reqMovieList() {
     const apiMovieList = await movieAPI.getMovies();
-    this.setState({ movies: apiMovieList, loading: false });
+    this.setState({
+      movies: apiMovieList,
+      loading: false,
+    });
   }
 
   render() {
     const { movies, loading } = this.state;
     return (
       <div data-testid="movie-list">
-        { loading ? <Loading />
-          : movies.map((movie) => <MovieCard key={ movie.title } movie={ movie } />)}
+        { loading ? <Loading /> : movies
+          .map((movie) => <MovieCard key={ movie.title } movie={ movie } />)}
       </div>
     );
   }
 }
+
+MovieList.propTypes = {
+  movies: PropTypes.shape({
+    title: PropTypes.string.isrequired,
+  }),
+}.isrequired;
 
 export default MovieList;
