@@ -32,7 +32,7 @@ class EditMovie extends Component {
     });
   }
 
-  async reqMovie(){
+  async reqMovie() {
     const { match } = this.props;
     const { id } = match.params;
     const foundMovie = await movieAPI.getMovie(id);
