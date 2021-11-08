@@ -176,15 +176,4 @@ MovieForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
 };
 
-MovieForm.defaultProps = {
-  movie: {
-    title: 'None',
-    subtitle: 'None',
-    imagePath: 'None',
-    storyline: 'None',
-    genre: 'None',
-    rating: 0,
-  },
-};
-
 export default MovieForm;
