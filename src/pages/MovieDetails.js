@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import * as movieAPI from '../services/movieAPI';
 import { Loading } from '../components';
+import Header from '../components/Header';
 
 /**
  * Consultei o repositório do Wendell Costa para resolver essa parte.
@@ -44,17 +45,20 @@ class MovieDetails extends Component {
     const { movie } = this.state;
     const { id, title, storyline, imagePath, genre, rating, subtitle } = movie;
     return (
-      <div data-testid="movie-details">
-        <img alt="Movie Cover" src={ `../${imagePath}` } />
-        <p>{ `Title: ${title}` }</p>
-        <p>{ `Subtitle: ${subtitle}` }</p>
-        <p>{ `Storyline: ${storyline}` }</p>
-        <p>{ `Genre: ${genre}` }</p>
-        <p>{ `Rating: ${rating}` }</p>
-        <Link to={ `/movies/${id}/edit` }>EDITAR</Link>
-        <Link to="/">VOLTAR</Link>
-        <Link to="/" onClick={ this.deleteMovie }>DELETAR</Link>
-      </div>
+      <>
+        <Header />
+        <div data-testid="movie-details" className="movie-card-details">
+          <img className="movie-card-image" alt="Movie Cover" src={ `../${imagePath}` } />
+          <p className="movie-card-title">{ `Title: ${title}` }</p>
+          <p className="movie-card-subtitle">{ `Subtitle: ${subtitle}` }</p>
+          <p className="movie-card-storyline">{ `Storyline: ${storyline}` }</p>
+          <p>{ `Genre: ${genre}` }</p>
+          <p>{ `Rating: ${rating}` }</p>
+          <Link to={ `/movies/${id}/edit` }>EDITAR</Link>
+          <Link to="/">VOLTAR</Link>
+          <Link to="/" onClick={ this.deleteMovie }>DELETAR</Link>
+        </div>
+      </>
     );
   }
 

@@ -42,6 +42,8 @@ class MovieList extends Component {
           { loading ? <Loading /> : movies
             .map((movie) => <MovieCard key={ movie.title } movie={ movie } />)}
         </div>
+        {/* <a class="switchLeft sliderButton"></a>
+        <a class="switchRight sliderButton"></a> */}
         <Link to="/movies/new">ADICIONAR CARTÃO</Link>
       </>
     );
