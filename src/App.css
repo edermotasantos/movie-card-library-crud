@@ -1,13 +1,9 @@
 body {
-  /* background: linear-gradient(45deg, #89B5AF, #96C7C1, #CEE5D0, #544179, #6166B3, #32C1CD, #32C1CD, #17D7A0); */
-  /* background: linear-gradient(45deg, #FEF5ED, #D3E4CD, #ADC2A9, #99A799); */
-  /* background: linear-gradient(45deg, #000000, #3D0000, #950101, #D3E4CD, #ADC2A9, #99A799); */
-  /* background: linear-gradient(45deg, #000000, #3D0000, #950101, #D3E4CD, #ADC2A9, #99A799, #AC4B1C, #FCA652, #FFD57E, #FFEFA0); */
-  background: linear-gradient(45deg, #000000, #3D0000, #950101);
+  animation: colors 10s ease infinite;
+  background: linear-gradient(45deg, black, #3d0000, #950101);
   background-size: 400% 400%;
   box-sizing: border-box;
   font-size: 16px;
-  animation: colors 10s ease infinite;
 }
 
 @keyframes colors {
@@ -24,15 +20,15 @@ body {
 
 .movie-card-header {
   align-items: center;
-  background: linear-gradient(45deg, #3D0000, #950101);
+  animation: colors 5s ease infinite;
+  background: linear-gradient(45deg, #3d0000, #950101);
   display: flex;
   height: 100px;
   justify-content: center;
-  animation: colors 5s ease infinite;
 }
 
 .page-title {
-  color: #ddd9ce;
+  color: white;
   font-size: 28px;
   font-weight: 500;
   text-align: center;
@@ -46,35 +42,34 @@ body {
 
 .movie-card {
   align-items: center;
-  background: #3D0000;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  height: 420px;
-  margin: 5px;
-  overflow: hidden;
-  transition: all 0.3s;
-  width: 290px;
-  z-index: 1;
   animation: colors 5s ease infinite;
-}
-
-.movie-card:hover {
-  background-color: whitesmoke;
+  background: #3d0000;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 6px;
-  box-shadow: 5px 5px 5px #3D0000;
   display: flex;
   flex-direction: column;
   height: 450px;
-  margin-top: -2% -2%;
+  margin: 5px;
   overflow: hidden;
+  transition: all 0.3s;
   width: 300px;
-  z-index: 2;
+  z-index: 1;
+}
+
+.movie-card:hover {
+  animation: colors 3s ease infinite;
   background: #950101;
   background-size: 250% 250%;
-  animation: colors 3s ease infinite;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 6px;
+  box-shadow: 5px 5px 5px #3d0000;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  margin-top: -2% -2%;
+  overflow: hidden;
+  width: 350px;
+  z-index: 2;
 }
 
 .movie-card-image {
@@ -126,7 +121,8 @@ body {
 
 .movie-card-details {
   align-items: center;
-  background: #3D0000;
+  animation: colors 5s ease infinite;
+  background: #3d0000;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 6px;
   display: flex;
@@ -137,36 +133,4 @@ body {
   transition: all 0.3s;
   width: 980px;
   z-index: 1;
-  animation: colors 5s ease infinite;
 }
-
-/* .carousel {
-  height: 250px;
-  width: 80;
-  position: relative;
-}
-
-.carousel .switchLeft,
-.carousel .switchRight {
-  color: whitesmoke;
-  font-weight: bold;
-  height: 100%;
-  width: 45px;
-  line-height: 250px;
-  font-size: 25px;
-  text-align: center;
-  background-color: lightgreen;
-  font-family: sans-serif;
-  top:  0;
-  z-index: 3;
-}
-
-.carousel .switchLeft {
-  position: absolute;
-  left: -50px;
-}
-
-.carousel .switchRight {
-  position: absolute;
-  right: -50px;
-} */
