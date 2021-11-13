@@ -1,0 +1,21 @@
+[33ma882eeb[m[33m ([m[1;36mHEAD -> [m[1;32meder-mota-santos-project-movie-card-library-crud[m[33m, [m[1;31morigin/eder-mota-santos-project-movie-card-library-crud[m[33m)[m HEAD@{0}: commit: Apaga componente link comentado
+[33m78e9c68[m HEAD@{1}: commit: Corrige parcialmente erros de Stylelint
+[33m4d4125b[m HEAD@{2}: commit: Corrige erros de stylelint
+[33m7a69296[m HEAD@{3}: commit: Corrige parcialmente css
+[33mdd84ccd[m HEAD@{4}: commit: Instalaçao de Bootstrap e inclusao debotoes
+[33m5c286fb[m HEAD@{5}: commit: Altera css da MovieList e da MovieDetails
+[33mac3d605[m HEAD@{6}: commit: Cria o componente header e inclui classes para o MovieList
+[33m40f9be7[m HEAD@{7}: commit: Corrige renderizaçao na primeira pagina
+[33ma951810[m HEAD@{8}: commit: Corrige issue local de movie indefinido
+[33m29da787[m HEAD@{9}: commit: Teste Evaluator Job
+[33maebf27e[m HEAD@{10}: commit: Altera nome de variavel em NewMovie
+[33mee4648d[m HEAD@{11}: commit: Corrige App.js e NewMovie.js
+[33m0aef108[m HEAD@{12}: commit: Corrige MovieForm e Lint
+[33m47eadcf[m HEAD@{13}: commit: Realiza uma requisição para buscar o filme que será editado em EditMovie
+[33mbd5e1c8[m HEAD@{14}: commit: Faz uma requisição para buscar o filme que deverá ser renderizado dentro de Movie Details
+[33m0cf4496[m HEAD@{15}: commit: 3 - Insira um link para a página de detalhes de um filme dentro de MovieCard e corrige props de requisito anterior
+[33m4cd75b5[m HEAD@{16}: commit: 2 - Faz uma requisição para buscar e mostrar a lista de filmes quando MovieList for montado
+[33m47030bc[m HEAD@{17}: commit: 1 - Renderize BrowserRouter no componente App usando rotas
+[33mc37230f[m HEAD@{18}: commit: iniciando o projeto. VAMOS COM TUDO :rocket:
+[33m5a7a5dd[m[33m ([m[1;31morigin/rober[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{19}: checkout: moving from master to eder-mota-santos-project-movie-card-library-crud
+[33m5a7a5dd[m[33m ([m[1;31morigin/rober[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{20}: clone: from https://github.com/tryber/sd-012-project-movie-card-library-crud.git
