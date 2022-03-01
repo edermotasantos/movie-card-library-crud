@@ -5,11 +5,6 @@ import * as movieAPI from '../services/movieAPI';
 import { Loading } from '../components';
 import Header from '../components/Header';
 
-/**
- * Consultei o repositório do Wendell Costa para resolver essa parte.
- * Link: https://github.com/tryber/sd-011-project-movie-card-library-crud/pull/172/files
- */
-
 class MovieDetails extends Component {
   constructor() {
     super();

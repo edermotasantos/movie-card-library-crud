@@ -5,11 +5,6 @@ import { MovieForm } from '../components';
 import * as movieAPI from '../services/movieAPI';
 import Loading from '../components/Loading';
 
-/**
- * Consultei o repositório do Eduardo Texeira para resolver essa parte.
- * Link: https://github.com/tryber/sd-011-project-movie-card-library-crud/pull/158/files
- */
-
 class EditMovie extends Component {
   constructor(props) {
     super(props);
