@@ -4,14 +4,12 @@
   box-sizing: border-box;
 }
 
-body {
-  align-items: center;
+body .container {
   animation: colors 10s ease infinite;
   background: linear-gradient(45deg, black, #3d0000, #950101);
-  box-sizing: border-box;
-  display: flex;
+  display: grid;
   font-size: 16px;
-  justify-content: center;
+  place-items: center;
   min-height: 100vh;
   width: 100%;
 }
@@ -42,6 +40,8 @@ body {
   display: flex;
   height: 100px;
   justify-content: center;
+  padding: 20px;
+  width: 100%;
 }
 
 .page-title {
@@ -55,28 +55,44 @@ body {
   display: flex;
   flex-direction: row;
   overflow-x: auto;
+  overflow: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 }
 
-.movie-card {
+.card-container {
   align-items: center;
   animation: colors 5s ease infinite;
   background: #3d0000;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 6px;
   display: flex;
+  flex: none;
   flex-direction: column;
-  height: 425px;
+  height: 510px;
   margin: 5px;
-  overflow: hidden;
+  pointer-events: none; /* desativa qualquer evento feito no card */
+  scroll-snap-align: start;
   transition: all 0.3s;
-  width: 300px;
+  width: 35%;
   z-index: 1;
 }
 
-.movie-card:hover {
+.movie-card {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-container:hover {
+  align-items: center;
+  flex: none;
+  height: 515px;
+  margin: 5px;
+  scroll-snap-align: start;
+  transition: all 0.3s;
+  width: 46%;
   animation: colors 3s ease infinite;
   background: #950101;
   background-size: 250% 250%;
@@ -85,10 +101,8 @@ body {
   box-shadow: 5px 5px 5px #3d0000;
   display: flex;
   flex-direction: column;
-  height: 430px;
   margin-top: -2% -2%;
   overflow: hidden;
-  width: 305px;
   z-index: 2;
 }
 
@@ -168,4 +182,10 @@ body {
 
 .container .buttons button:first-child img {
   transform: rotate(180deg);
+}
+
+.movie-card link {
+  height: 75%;
+  color: black;
+  padding: 5px;
 }
