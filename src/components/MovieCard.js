@@ -2,11 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-/**
- * Consultei o repositório do Guilherme Oliveira para resolver essa parte.
- * Link: https://github.com/tryber/sd-011-project-movie-card-library-crud/pull/177/commits/592f4b0403841461bf83e803703c78b805b1ceed
- */
-
 class MovieCard extends React.Component {
   render() {
     const { movie } = this.props;

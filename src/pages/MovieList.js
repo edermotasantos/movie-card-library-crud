@@ -14,12 +14,28 @@ class MovieList extends Component {
       loading: true,
     };
     this.reqMovieList = this.reqMovieList.bind(this);
+    // this.handleLeftClick = this.handleLeftClick.bind(this);
+    // this.handleRightClick = this.handleRightClick.bind(this);
+    // this.carousel = this.carousel.bind(this);
+    // this.scrollList = this.scrollList.bind(this);
   }
-
+  
   componentDidMount() {
     this.reqMovieList();
+    // this.handleLeftClick();
+    // this.handleRightClick();
+    // this.scrollList();
+    // this.carousel;
+    document.querySelector('.movie-list')
+      .addEventListener("wheel", e => {
+        if(e.deltaY > 0) {
+          e.target.scrollBy(300, 0)
+        } else {
+          e.target.scrollBy(-300, 0)
+        }
+      })
   }
-
+  
   async reqMovieList() {
     const apiMovieList = await movieAPI.getMovies();
     this.setState({
@@ -28,14 +44,42 @@ class MovieList extends Component {
     });
   }
 
+  // async scrollList() {
+  //   await document.querySelector('#movie-list')
+  //   .addEventListener("wheel", e => {
+  //     if(e.deltaY > 0) {
+  //       e.target.scrollBy(300, 0)
+  //     } else {
+  //       e.target.scrollBy(-300, 0)
+  //     }
+  //   })
+  // }
+
+  // carousel = useRef(null);
+    
+  // async handleLeftClick (e) {
+  //   // await e.preventDefault(); // previne comportamento padrão
+  //   // this.carousel.current.scrollLeft -= this.carousel.current.offsetWidth;
+  //   offsetWidth -= document.querySelector('#foo').offsetWidth;
+  // }
+
+  // async handleRightClick (e) {
+  //   // await e.preventDefault();
+  //   // this.carousel.current.scrollLeft += this.carousel.current.offsetWidth;
+  //   offsetWidth += document.querySelector('#foo').offsetWidth;
+  // }
+
   render() {
     const { movies, loading } = this.state;
+    // const { handleLeftClick, handleRightClick } = this;
     return (
       <>
         <Header />
-        <div data-testid="movie-list" className="movie-list">
-          { loading ? <Loading /> : movies
-            .map((movie) => <MovieCard key={ movie.title } movie={ movie } />)}
+        <div className="container">
+          <div data-testid="movie-list" className="movie-list">
+            { loading ? <Loading /> : movies
+              .map((movie) => <MovieCard key={ movie.title } movie={ movie } />)}
+          </div>
         </div>
         <Link to="/movies/new">ADICIONAR CARTÃO</Link>
       </>

@@ -1,9 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  align-items: center;
   animation: colors 10s ease infinite;
   background: linear-gradient(45deg, black, #3d0000, #950101);
-  background-size: 400% 400%;
   box-sizing: border-box;
+  display: flex;
   font-size: 16px;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container {
+  width: 100vw;
 }
 
 @keyframes colors {
@@ -37,10 +51,13 @@ body {
   text-align: center;
 }
 
-.movie-list {
+.container .movie-list {
   display: flex;
-  flex-flow: row wrap;
-  padding: 48px 30px;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 .movie-card {
@@ -68,10 +85,10 @@ body {
   box-shadow: 5px 5px 5px #3d0000;
   display: flex;
   flex-direction: column;
-  height: 450px;
+  height: 430px;
   margin-top: -2% -2%;
   overflow: hidden;
-  width: 325px;
+  width: 305px;
   z-index: 2;
 }
 
@@ -136,4 +153,19 @@ body {
   transition: all 0.3s;
   width: 980px;
   z-index: 1;
+}
+
+.container .buttons {
+  width: 100%;
+  text-align: center;
+}
+
+.container .buttons button {
+  background-color: transparent;
+  border:none;
+  cursor: pointer;
+}
+
+.container .buttons button:first-child img {
+  transform: rotate(180deg);
 }
