@@ -4,20 +4,24 @@
   box-sizing: border-box;
 }
 
-body .container {
+body .container-cards-and-arrows {
   animation: colors 10s ease infinite;
   background: linear-gradient(45deg, black, #3d0000, #950101);
-  display: grid;
+  display: flex;
   font-size: 16px;
   place-items: center;
-  min-height: 100vh;
+  min-height: 90vh;
   width: 100%;
 }
 
-.container {
-  width: 100vw;
-  position: absolute;
-  z-index: 1;
+/* dimensionar para que os cartões fiquem entre as setas, pois está atrás, por isso não funciona o link*/
+
+.container-cards-and-arrows {
+  width: 70vw;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
 }
 
 @keyframes colors {
@@ -53,7 +57,7 @@ body .container {
   text-align: center;
 }
 
-.container .movie-list {
+.container-cards-and-arrows .movie-list {
   display: flex;
   flex-direction: row;
   overflow-x: auto;
@@ -76,7 +80,8 @@ body .container {
   margin: 5px;
   scroll-snap-align: start;
   transition: all 0.3s;
-  width: 35%;
+  width: 35%; /* determina a quantidade de cards que aparecem */
+  /* sendo 25% equivalente a dois cards e 35% equivalente a 3 cards  */
   z-index: 1;
 }
 
@@ -190,19 +195,16 @@ body .container {
   z-index: 1;
 }
 
-.container .buttons {
-  width: 100%;
+.container-cards-and-arrows button {
   text-align: center;
   margin-top: 0;
-}
-
-.container .buttons button {
+  z-index: 1;
   background-color: transparent;
   border:none;
   cursor: pointer;
 }
 
-.container .buttons button:first-child img {
+.container-cards-and-arrows .scroll-left img {
   transform: rotate(180deg);
 }
 
@@ -212,23 +214,14 @@ body .container {
   padding: 5px;
 }
 
-.body-container .buttons {
-  width: 100%;
-  text-align: center;
-  height: 110vh;
+.body-container {
+  animation: colors 10s ease infinite;
+  background: linear-gradient(45deg, black, #3d0000, #950101);
   display: flex;
-  margin-top: 0;
-  justify-content: space-between;
-  position: relative;
-  z-index: 2;
+  flex-direction: column;
+  justify-self: center;
 }
 
-.body-container .buttons button {
-  background-color: transparent;
-  border:none;
-  cursor: pointer;
-}
-
-.body-container .buttons button:first-child img {
-  transform: rotate(180deg);
+.body-container .container-cards-and-arrows link {
+  text-decoration: none; /* para tirar o sublinhado, mas não está funcionando */
 }

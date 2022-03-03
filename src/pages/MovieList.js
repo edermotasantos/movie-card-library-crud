@@ -62,30 +62,28 @@ class MovieList extends Component {
     const { movies, loading } = this.state;
     return (
       <div data-testid="movie-list" className="body-container">
-        <div data-testid="movie-list" className="container">
           <Header />
-          <div data-testid="movie-list" className="movie-list">
-            { loading ? <Loading /> : movies
-              .map((movie) => <MovieCard key={ movie.title } movie={ movie } />)}
-          </div>
-          <Link to="/movies/new">ADICIONAR CARTÃO</Link>
-        </div>
-        <div className="buttons">
+        <div data-testid="movie-list" className="container-cards-and-arrows">
           <button
             type="button"
             onClick={ this.handleLeftClick }
             className="scroll-left"
           >
             <img src="static/static/images/216151_right_chevron_icon.png" alt="Scroll Left"/>
-          </ button>
-          <button
-            type="button"
-            onClick={ this.handleRightClick }
-            className="scroll-right"
-          >
-            <img src="static/static/images/216151_right_chevron_icon.png" alt="Scroll Right"/>
-          </button>
+          </ button>            
+          <div data-testid="movie-list" className="movie-list">
+            { loading ? <Loading /> : movies
+              .map((movie) => <MovieCard key={ movie.title } movie={ movie } />)}
+          </div>
+            <button
+              type="button"
+              onClick={ this.handleRightClick }
+              className="scroll-right"
+            >
+              <img src="static/static/images/216151_right_chevron_icon.png" alt="Scroll Right"/>
+            </button>
         </div>
+          <Link to="/movies/new">ADICIONAR CARTÃO</Link>
       </div>
     );
   }
