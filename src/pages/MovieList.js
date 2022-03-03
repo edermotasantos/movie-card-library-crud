@@ -6,7 +6,8 @@ import * as movieAPI from '../services/movieAPI';
 import Loading from '../components/Loading';
 import Header from '../components/Header';
 
-const scroll = 300;
+let scroll = 300;
+let count = 1
 
 class MovieList extends Component {
   constructor() {
@@ -16,42 +17,38 @@ class MovieList extends Component {
       loading: true,
     };
     this.reqMovieList = this.reqMovieList.bind(this);
-    // this.handleLeftClick = this.handleLeftClick.bind(this);
-    // this.handleRightClick = this.handleRightClick.bind(this);
   }
 
   componentDidMount() {
     this.reqMovieList();
-    // this.handleLeftClick();
-    // this.handleRightClick();
     document.querySelector('.movie-list')
       .addEventListener('wheel', (e) => {
         if (e.deltaY > 0) e.target.scrollBy(scroll, 0);
         e.target.scrollBy(-scroll, 0);
       });
-      document.querySelector('.scroll-left')
+    document.querySelector('.scroll-left')
       .addEventListener('click', () => {
+        if (count === 0) {
+          scroll = -900
+          count = 4;
+        }
         document.querySelector('.movie-list').scrollBy(-scroll, 0);
+        console.log('dec', count, scroll);
+        scroll = 300;
+        if (count > 0) count -= 1;
       });
-    document.querySelector('.scroll-right')
+      document.querySelector('.scroll-right')
       .addEventListener('click', () => {
+        if (count === 4) {
+          scroll = -900
+          count = 0;
+        }
+        count += 1;
+        console.log(count, scroll);
         document.querySelector('.movie-list').scrollBy(scroll, 0);
+        scroll = 300;
       });
   }
-
-  // async handleLeftClick(e) {
-  //   await document.querySelector('.scroll-left')
-  //     .addEventListener('click', (e) => {
-  //       e.target.scrollBy(-scroll, 0);
-  //     });
-  // }
-
-  // async handleRightClick(e) {
-  //   await document.querySelector('.scroll-right')
-  //     .addEventListener('click', (e) => {
-  //       e.target.scrollBy(scroll, 0);
-  //     });
-  // }
 
   async reqMovieList() {
     const apiMovieList = await movieAPI.getMovies();

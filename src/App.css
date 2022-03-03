@@ -76,7 +76,7 @@ body .container {
   margin: 5px;
   scroll-snap-align: start;
   transition: all 0.3s;
-  width: 25%;
+  width: 35%;
   z-index: 1;
 }
 
