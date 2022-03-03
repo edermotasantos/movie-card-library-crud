@@ -29,7 +29,7 @@ class MovieList extends Component {
     document.querySelector('.scroll-left')
       .addEventListener('click', () => {
         if (count === 0) {
-          scroll = -900
+          scroll = -965;
           count = 4;
         }
         document.querySelector('.movie-list').scrollBy(-scroll, 0);
