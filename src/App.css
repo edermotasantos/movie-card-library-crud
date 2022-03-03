@@ -16,6 +16,8 @@ body .container {
 
 .container {
   width: 100vw;
+  position: absolute;
+  z-index: 1;
 }
 
 @keyframes colors {
@@ -72,11 +74,30 @@ body .container {
   flex-direction: column;
   height: 510px;
   margin: 5px;
-  pointer-events: none; /* desativa qualquer evento feito no card */
   scroll-snap-align: start;
   transition: all 0.3s;
-  width: 35%;
+  width: 25%;
   z-index: 1;
+}
+
+@media screen and (max-width: 685px) {
+  .card-container {
+    align-items: center;
+    animation: colors 5s ease infinite;
+    background: #3d0000;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 6px;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    height: 510px;
+    margin: 5px;
+    pointer-events: none; /* desativa qualquer evento feito no card */
+    scroll-snap-align: start;
+    transition: all 0.3s;
+    width: 25%;
+    z-index: 1;
+  }
 }
 
 .movie-card {
@@ -172,6 +193,7 @@ body .container {
 .container .buttons {
   width: 100%;
   text-align: center;
+  margin-top: 0;
 }
 
 .container .buttons button {
@@ -188,4 +210,25 @@ body .container {
   height: 75%;
   color: black;
   padding: 5px;
+}
+
+.body-container .buttons {
+  width: 100%;
+  text-align: center;
+  height: 110vh;
+  display: flex;
+  margin-top: 0;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.body-container .buttons button {
+  background-color: transparent;
+  border:none;
+  cursor: pointer;
+}
+
+.body-container .buttons button:first-child img {
+  transform: rotate(180deg);
 }
