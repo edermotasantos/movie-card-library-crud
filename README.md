@@ -5,6 +5,8 @@
   <a href = "mailto:eder.mota@outlook.com"><img src="https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" target="_blank"></a> 
 </div>
 
+# Resumo
+
 Esse projeto foi proposto pela Trybe para o desenvolvimento de uma aplicação Frontend. Através do uso do React é feita uma aplicação com a possibilidade de criar, visualizar, atualizar e excluir cards de filmes. São utilizadas utilizado componentDidMount, componentDidUpdate, componentWillUnmount, props.children. Também são utilizados os componentes: BrowserRouter, Link, Redirect, Route e Switch.São utilizadas utilizado componentDidMount, componentDidUpdate, componentWillUnmount, props.children. Também são utilizados os componentes: BrowserRouter, Link, Redirect, Route e Switch. Para isso é necessário que cumpra os seguintes requisitos:
 - Criar rotas da aplicação
 - Criar/visualizar/atualizar/excluir um filme da lista
@@ -480,6 +482,11 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH#cohort_name=Turma%2012)
 
 O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
+
+<div> 
+  <a href="https://www.linkedin.com/in/eder-santos-dev/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+  <a href = "mailto:eder.mota@outlook.com"><img src="https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" target="_blank"></a> 
+</div>
 
 ## 🎞 Referências:
 <a href="https://github.com/iuricode/readme-template/blob/main/README-repository/iuricode.md">iuricode</a>
