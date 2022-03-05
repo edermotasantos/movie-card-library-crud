@@ -14,8 +14,6 @@ body .container-cards-and-arrows {
   width: 100%;
 }
 
-/* dimensionar para que os cartões fiquem entre as setas, pois está atrás, por isso não funciona o link*/
-
 .container-cards-and-arrows {
   width: 70vw;
   align-items: center;
@@ -80,10 +78,38 @@ body .container-cards-and-arrows {
   margin: 5px;
   scroll-snap-align: start;
   transition: all 0.3s;
-  width: 35%; /* determina a quantidade de cards que aparecem */
+  width: 45%; /* determina a quantidade de cards que aparecem */
   /* sendo 25% equivalente a dois cards e 35% equivalente a 3 cards  */
   z-index: 1;
 }
+
+.card-container:hover {
+  align-items: center;
+  animation: colors 3s ease infinite;
+  background: #950101;
+  background-size: 250% 250%;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 6px;
+  box-shadow: 5px 5px 5px #3d0000;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  height: 515px;
+  margin: 5px;
+  margin-top: -2% -2%;
+  overflow: hidden;
+  scroll-snap-align: start;
+  transition: all 0.3s;
+  width: 46%;
+  z-index: 2;
+}
+
+.movie-card {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
 
 @media screen and (max-width: 685px) {
   .card-container {
@@ -95,43 +121,15 @@ body .container-cards-and-arrows {
     display: flex;
     flex: none;
     flex-direction: column;
-    height: 510px;
+    height: 414px;
     margin: 5px;
     pointer-events: none; /* desativa qualquer evento feito no card */
     scroll-snap-align: start;
     transition: all 0.3s;
-    width: 25%;
+    width: 45%;
     z-index: 1;
   }
 }
-
-.movie-card {
-  height: 100%;
-  object-fit: cover;
-  width: 100%;
-}
-
-.card-container:hover {
-  align-items: center;
-  flex: none;
-  height: 515px;
-  margin: 5px;
-  scroll-snap-align: start;
-  transition: all 0.3s;
-  width: 46%;
-  animation: colors 3s ease infinite;
-  background: #950101;
-  background-size: 250% 250%;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 6px;
-  box-shadow: 5px 5px 5px #3d0000;
-  display: flex;
-  flex-direction: column;
-  margin-top: -2% -2%;
-  overflow: hidden;
-  z-index: 2;
-}
-
 .movie-card-image {
   width: 100%;
 }
