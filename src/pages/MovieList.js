@@ -61,9 +61,9 @@ class MovieList extends Component {
   render() {
     const { movies, loading } = this.state;
     return (
-      <div data-testid="movie-list" className="body-container">
+      <div className="body-container">
           <Header />
-        <div data-testid="movie-list" className="container-cards-and-arrows">
+        <div className="container-cards-and-arrows">
           <button
             type="button"
             onClick={ this.handleLeftClick }
