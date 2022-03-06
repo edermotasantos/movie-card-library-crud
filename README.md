@@ -44,6 +44,8 @@ Para usar Movie Card Library CRUD, siga estas etapas:
 * Para testar todos os requisitos digite `npm test`
 * Para testar somente um requisito digite `npm test nomedotest.test.js`, sendo "nomedotest.test.js" o nome do teste que deseja executar. Exemplo: para executar o teste "EditMovie.test.js", digite: `npm test EditMovie.test.js`
 
+Agora você já pode ver o funcionamento desse projeto!
+
 
 ## A seguir instruções e requisitos que foram solicitados para o projeto
 
