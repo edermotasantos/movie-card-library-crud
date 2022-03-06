@@ -5,7 +5,7 @@
   <a href = "mailto:eder.mota@outlook.com"><img src="https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" target="_blank"></a> 
 </div>
 
-# Resumo
+## Resumo
 
 Esse projeto foi proposto pela Trybe para o desenvolvimento de uma aplicação Frontend. Através do uso do React é feita uma aplicação com a possibilidade de criar, visualizar, atualizar e excluir cards de filmes. São utilizadas utilizado componentDidMount, componentDidUpdate, componentWillUnmount, props.children. Também são utilizados os componentes: BrowserRouter, Link, Redirect, Route e Switch.São utilizadas utilizado componentDidMount, componentDidUpdate, componentWillUnmount, props.children. Também são utilizados os componentes: BrowserRouter, Link, Redirect, Route e Switch. Para isso é necessário que cumpra os seguintes requisitos:
 - Criar rotas da aplicação
