@@ -74,7 +74,7 @@ body .container-cards-and-arrows {
   display: flex;
   flex: none;
   flex-direction: column;
-  height: 510px;
+  height: 500px;
   margin: 5px;
   scroll-snap-align: start;
   transition: all 0.3s;
