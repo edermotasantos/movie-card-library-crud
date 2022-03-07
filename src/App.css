@@ -158,7 +158,6 @@ body .container-cards-and-arrows {
 .movie-card-details {
   margin: 12px;
   padding: 10px;
-  text-decoration: none;
 }
 
 .container-cards-and-arrows button {
@@ -174,12 +173,6 @@ body .container-cards-and-arrows {
   transform: rotate(180deg);
 }
 
-.movie-card link {
-  height: 75%;
-  color: black;
-  padding: 5px;
-}
-
 .body-container {
   animation: colors 10s ease infinite;
   background: linear-gradient(45deg, black, #3d0000, #950101);
@@ -188,7 +181,6 @@ body .container-cards-and-arrows {
   justify-self: center;
 }
 
-.body-container link {
-  justify-content: flex-end;
-  text-decoration: none; /* para tirar o sublinhado, mas não está funcionando */
+a:link {
+  text-decoration: none;
 }
