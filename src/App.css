@@ -202,6 +202,10 @@ a:link {
   text-decoration: none;
 }
 
+.movie-card-text-container {
+  margin: 25px 0px;
+}
+
 .button-details {
   animation: colors 10s ease infinite;
   background: linear-gradient(45deg, #000000, #0a0a0a, #fcfafa);
@@ -213,7 +217,7 @@ a:link {
 }
 
 .button-details:hover {
-  animation: colors 10s ease infinite;
+  animation: colors 0.05s ease infinite;
   background: linear-gradient(45deg, #000000, #fcfafa, #0a0a0a);
   border: none;
   border-radius: 10px;

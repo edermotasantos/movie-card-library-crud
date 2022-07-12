@@ -49,11 +49,13 @@ class MovieDetails extends Component {
               alt="Movie Cover"
               src={ `../${imagePath}` }
             />
-            <p className="movie-card-title">{ `Title: ${title}` }</p>
-            <p className="movie-card-subtitle">{ `Subtitle: ${subtitle}` }</p>
-            <p className="movie-card-storyline">{ `Storyline: ${storyline}` }</p>
-            <p>{ `Genre: ${genre}` }</p>
-            <p>{ `Rating: ${rating}` }</p>
+            <div className="movie-card-text-container">
+              <p className="movie-card-title">{ `Title: ${title}` }</p>
+              <p className="movie-card-subtitle">{ `Subtitle: ${subtitle}` }</p>
+              <p className="movie-card-storyline">{ `Storyline: ${storyline}` }</p>
+              <p>{ `Genre: ${genre}` }</p>
+              <p>{ `Rating: ${rating}` }</p>
+            </div>
             <button className="button-details" type="button">
               <Link to={ `/movies/${id}/edit` }>EDITAR</Link>
             </button>

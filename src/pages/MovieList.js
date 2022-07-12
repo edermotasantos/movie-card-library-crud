@@ -1,3 +1,4 @@
+/* eslint-disable no-magic-numbers */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -8,6 +9,7 @@ import Header from '../components/Header';
 
 let scroll = 300;
 let count = 1;
+const movieList = '.movie-list';
 
 class MovieList extends Component {
   constructor() {
@@ -17,26 +19,39 @@ class MovieList extends Component {
       loading: true,
     };
     this.reqMovieList = this.reqMovieList.bind(this);
+    this.scrollLeft = this.scrollLeft.bind(this);
+    this.scrollRight = this.scrollRight.bind(this);
   }
 
   componentDidMount() {
     this.reqMovieList();
-    document.querySelector('.movie-list')
-      .addEventListener('wheel', (e) => {
-        if (e.deltaY > 0) e.target.scrollBy(scroll, 0);
-        e.target.scrollBy(-scroll, 0);
-      });
+    this.scrollLeft();
+    this.scrollRight();
+  }
+
+  async reqMovieList() {
+    const apiMovieList = await movieAPI.getMovies();
+    this.setState({
+      movies: apiMovieList,
+      loading: false,
+    });
+  }
+
+  scrollLeft() {
     document.querySelector('.scroll-left')
       .addEventListener('click', () => {
         if (count === 0) {
           scroll = -965;
           count = 4;
         }
-        document.querySelector('.movie-list').scrollBy(-scroll, 0);
+        document.querySelector(movieList).scrollBy(-scroll, 0);
         console.log('dec', count, scroll);
         scroll = 300;
         if (count > 0) count -= 1;
       });
+  }
+
+  scrollRight() {
     document.querySelector('.scroll-right')
       .addEventListener('click', () => {
         if (count === 4) {
@@ -50,12 +65,12 @@ class MovieList extends Component {
       });
   }
 
-  async reqMovieList() {
-    const apiMovieList = await movieAPI.getMovies();
-    this.setState({
-      movies: apiMovieList,
-      loading: false,
-    });
+  mobileScroll() {
+    document.querySelector(movieList)
+      .addEventListener('wheel', (e) => {
+        if (e.deltaY > 0) e.target.scrollBy(scroll, 0);
+        e.target.scrollBy(-scroll, 0);
+      });
   }
 
   render() {
@@ -69,7 +84,10 @@ class MovieList extends Component {
             onClick={ this.handleLeftClick }
             className="scroll-left"
           >
-            <img src="static/static/images/216151_right_chevron_icon.png" alt="Scroll Left" />
+            <img
+              src="static/static/images/216151_right_chevron_icon.png"
+              alt="Scroll Left"
+            />
           </button>
           <div data-testid="movie-list" className="movie-list">
             { loading ? <Loading /> : movies
@@ -80,7 +98,10 @@ class MovieList extends Component {
             onClick={ this.handleRightClick }
             className="scroll-right"
           >
-            <img src="static/static/images/216151_right_chevron_icon.png" alt="Scroll Right" />
+            <img
+              src="static/static/images/216151_right_chevron_icon.png"
+              alt="Scroll Right"
+            />
           </button>
         </div>
         <Link to="/movies/new">ADICIONAR CARTÃO</Link>
