@@ -155,8 +155,25 @@ body .container-cards-and-arrows {
   text-align: justify;
 }
 
-.movie-card-details {
-  margin: 12px;
+body .movie-card-details-body {
+  animation: colors 10s ease infinite;
+  background: linear-gradient(45deg, #000000, #1b1b1b, #0e0d0d);
+  display: flex;
+  font-size: 16px;
+  place-items: center;
+  min-height: 90vh;
+  width: 100%;
+  margin-left: 0px;
+}
+
+.movie-card-details-body .movie-card-details {
+  margin: 14px 400px;
+  padding: 10px;
+}
+
+
+.movie-card-home {
+  margin: 14px;
   padding: 10px;
 }
 
@@ -183,4 +200,24 @@ body .container-cards-and-arrows {
 
 a:link {
   text-decoration: none;
+}
+
+.button-details {
+  animation: colors 10s ease infinite;
+  background: linear-gradient(45deg, #000000, #0a0a0a, #fcfafa);
+  border: none;
+  border-radius: 10px;
+  margin: 5px 1px 1px 1px;
+  padding: 5px;
+  width: 100%;
+}
+
+.button-details:hover {
+  animation: colors 10s ease infinite;
+  background: linear-gradient(45deg, #000000, #fcfafa, #0a0a0a);
+  border: none;
+  border-radius: 10px;
+  margin: 5px 1px 1px 1px;
+  padding: 5px;
+  width: 100%;
 }

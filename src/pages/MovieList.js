@@ -7,7 +7,7 @@ import Loading from '../components/Loading';
 import Header from '../components/Header';
 
 let scroll = 300;
-let count = 1
+let count = 1;
 
 class MovieList extends Component {
   constructor() {
@@ -37,10 +37,10 @@ class MovieList extends Component {
         scroll = 300;
         if (count > 0) count -= 1;
       });
-      document.querySelector('.scroll-right')
+    document.querySelector('.scroll-right')
       .addEventListener('click', () => {
         if (count === 4) {
-          scroll = -900
+          scroll = -900;
           count = 0;
         }
         count += 1;
@@ -62,28 +62,28 @@ class MovieList extends Component {
     const { movies, loading } = this.state;
     return (
       <div className="body-container">
-          <Header />
+        <Header />
         <div className="container-cards-and-arrows">
           <button
             type="button"
             onClick={ this.handleLeftClick }
             className="scroll-left"
           >
-            <img src="static/static/images/216151_right_chevron_icon.png" alt="Scroll Left"/>
-          </ button>            
+            <img src="static/static/images/216151_right_chevron_icon.png" alt="Scroll Left" />
+          </button>
           <div data-testid="movie-list" className="movie-list">
             { loading ? <Loading /> : movies
               .map((movie) => <MovieCard key={ movie.title } movie={ movie } />)}
           </div>
-            <button
-              type="button"
-              onClick={ this.handleRightClick }
-              className="scroll-right"
-            >
-              <img src="static/static/images/216151_right_chevron_icon.png" alt="Scroll Right"/>
-            </button>
+          <button
+            type="button"
+            onClick={ this.handleRightClick }
+            className="scroll-right"
+          >
+            <img src="static/static/images/216151_right_chevron_icon.png" alt="Scroll Right" />
+          </button>
         </div>
-          <Link to="/movies/new">ADICIONAR CARTÃO</Link>
+        <Link to="/movies/new">ADICIONAR CARTÃO</Link>
       </div>
     );
   }

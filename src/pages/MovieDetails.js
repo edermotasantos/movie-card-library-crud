@@ -42,16 +42,28 @@ class MovieDetails extends Component {
     return (
       <>
         <Header />
-        <div data-testid="movie-details" className="movie-card-details">
-          <img className="movie-card-image" alt="Movie Cover" src={ `../${imagePath}` } />
-          <p className="movie-card-title">{ `Title: ${title}` }</p>
-          <p className="movie-card-subtitle">{ `Subtitle: ${subtitle}` }</p>
-          <p className="movie-card-storyline">{ `Storyline: ${storyline}` }</p>
-          <p>{ `Genre: ${genre}` }</p>
-          <p>{ `Rating: ${rating}` }</p>
-          <Link to={ `/movies/${id}/edit` }>EDITAR</Link>
-          <Link to="/">VOLTAR</Link>
-          <Link to="/" onClick={ this.deleteMovie }>DELETAR</Link>
+        <div className="movie-card-details-body">
+          <div data-testid="movie-details" className="movie-card-details">
+            <img
+              className="movie-card-image"
+              alt="Movie Cover"
+              src={ `../${imagePath}` }
+            />
+            <p className="movie-card-title">{ `Title: ${title}` }</p>
+            <p className="movie-card-subtitle">{ `Subtitle: ${subtitle}` }</p>
+            <p className="movie-card-storyline">{ `Storyline: ${storyline}` }</p>
+            <p>{ `Genre: ${genre}` }</p>
+            <p>{ `Rating: ${rating}` }</p>
+            <button className="button-details" type="button">
+              <Link to={ `/movies/${id}/edit` }>EDITAR</Link>
+            </button>
+            <button className="button-details" type="button">
+              <Link to="/">VOLTAR</Link>
+            </button>
+            <button className="button-details" type="button">
+              <Link to="/" onClick={ this.deleteMovie }>DELETAR</Link>
+            </button>
+          </div>
         </div>
       </>
     );
